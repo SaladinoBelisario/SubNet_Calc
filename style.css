@@ -1,0 +1,105 @@
+#menu {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  background-color: #24369c;
+  width: 9em;
+  color: black;
+  font-size: 18pt;
+  font-weight: bold;
+}
+#menu ul {
+  padding: 5px 0 0 0;
+  margin: 0;
+  list-style: outside url("tick.ico");
+}
+#menu li {
+  margin: 1px 0 0 30px;
+  font-weight: bold;
+  background-color: #b4af36;
+  color: black;
+  font-size: 16pt;
+  padding: 0.15em;
+  cursor: pointer;
+}
+#menu li:hover {
+  background-color: #80bf9c;
+  text-decoration: none;
+  border-color: black;
+}
+ul#input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 20em;
+  border: 1px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  list-style-type: none;
+}
+ul#input li {
+  width: 100%;
+  overflow: auto;
+}
+select, input {
+  padding-bottom: 0;
+  float: right;
+  clear: both;
+  margin-right: 3em;
+  width: 9em;
+}
+#prevsubnet {
+  float: left;
+  clear: left;
+  width: 9em;
+}
+#nextsubnet {
+  float: right;
+  clear: right;
+  width: 9em;
+}
+table {
+  border-collapse: collapse;
+  margin: auto;
+}
+td, th {
+  font-size: 1em;
+  text-align: left;
+  border: 1px solid #c27f2b;
+  padding: 3px 7px 2px 7px;
+  background-color: #648551;
+}
+th {
+  /*  text-align: center;*/
+  font-size: 1.2em;
+  background-color: #627f54;
+  color: #FFF;
+}
+td {
+  font-family: "Lucida Console", monospace;
+}
+tr.even td {
+  background-color: #73a54d;
+}
+.hidden {
+  visibility: hidden;
+  border: none;
+}
+.dec, .hex {
+  width: 8em;
+}
+.bin {
+  width: 15em;
+}
+.netbits {
+  color: red;
+}
+.subnetbits {
+  color: blue;
+}
+.hostbits {
+  color: green;
+}
+#footer {
+  padding-top: 1em;
+  text-align: center;
+}

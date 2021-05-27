@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <title>Subnet Calculator</title>
+  <script type="text/javascript" src="subnet.js"></script>
+</head>
+<body>
+<div id="menu">
+  Filas
+  <ul>
+    <li onclick="showHideRow(1, this.id);" id="netID">ID de red</li>
+    <li onclick="showHideRow(2, this.id);" id="subnetID">ID de subred</li>
+    <li onclick="showHideRow(3, this.id);" id="firstHost">Primera dirección</li>
+    <li onclick="showHideRow(4, this.id);" id="lastHost">Última dirección</li>
+    <li onclick="showHideRow(5, this.id);" id="broadcast">Dirección de Broadcast</li>
+    <li onclick="showHideRow(6, this.id);" id="menumask">Máscara de subred</li>
+    <li onclick="showHideRow(7, this.id);" id="menuwildcard">Wildcard</li>
+  </ul>
+  Columnas
+  <ul>
+    <li onclick="showHideCol(1, this.id);" id="colDec">Decimal</li>
+    <li onclick="showHideCol(2, this.id);" id="colHex">Hexadecimal</li>
+    <li onclick="showHideCol(3, this.id);" id="colBin">Binario</li>
+  </ul>
+</div>
+<ul id="input">
+  <li>Dirección IP: <input type="text" id="ip" onchange="action(this.id)" /></li>
+  <li>Máscara: <select id="mask" onchange="action(this.id)"></select></li>
+  <li>Subredes: <select id="subnets" onchange="action(this.id)"></select></li>
+  <li>Direcciones: <select id="hosts" onchange="action(this.id)"></select></li>
+  <li>Clase: <select id="class" onchange="action(this.id)"><option id="classA">A</option><option id="classB">B</option><option id="classC">C</option></select></li>
+  <li><input type="submit" id="prevsubnet" value="Anterior" onclick="action(this.id);" /><input type="submit" id="nextsubnet" value="Siguiente" onclick="action(this.id);" /></li>
+</ul>
+<table id="infotable">
+  <tr>
+    <th class="hidden"></th>
+    <th class="dec">Decimal</th>
+    <th class="hex">Hexadecimal</th>
+    <th class="bin">Binario</th>
+  </tr>
+  <tr class="even">
+    <th>ID de red</th>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th>ID de subred</th>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="even">
+    <th>Primera dirección</th>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Última dirección</th>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="even">
+    <th>Dirección de Broadcast</th>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Mscara de subred</th>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="even">
+    <th>Wildcard</th>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+<script>action("load");</script>
+</body>
+</html>
